@@ -323,12 +323,22 @@ body {
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--card-border);
+    aspect-ratio: 16 / 9;
+    background: #000;
 }
 
 .video-wrapper video {
     width: 100%;
     display: block;
     background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .video-placeholder {
@@ -559,9 +569,10 @@ body {
 
 .car-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     position: relative;
+    align-items: start;
 }
 
 .car-card {
@@ -570,6 +581,8 @@ body {
     overflow: hidden;
     border: 1px solid var(--card-border);
     transition: var(--transition-normal);
+    display: flex;
+    flex-direction: column;
 }
 
 .car-card:hover {
@@ -584,7 +597,7 @@ body {
 
 .car-image {
     position: relative;
-    padding-top: 66.67%;
+    padding-top: 70%;
     overflow: hidden;
 }
 
@@ -595,6 +608,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
     transition: transform 0.5s ease;
 }
 
@@ -654,19 +668,21 @@ body {
 }
 
 .car-info {
-    padding: 20px;
+    padding: 18px 20px;
+    background: var(--secondary-dark);
 }
 
 .car-name {
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-white);
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .car-earned {
     font-size: 0.9rem;
     color: var(--text-muted);
+    margin: 0;
 }
 
 /* =====================================================
@@ -867,6 +883,21 @@ body {
 .testimonial-card.video-testimonial .video-thumb {
     position: relative;
     padding-top: 50%;
+}
+
+.testimonial-card .video-wrapper.testimonial-video {
+    position: relative;
+    padding-top: 56.25%;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+.testimonial-card .video-wrapper.testimonial-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .video-thumb-placeholder {
@@ -1260,8 +1291,12 @@ body {
         --section-padding: 80px;
     }
 
+    .car-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .car-card.featured {
-        grid-column: span 1;
+        grid-column: span 2;
     }
 
     .testimonial-card.featured-testimonial {
@@ -1270,6 +1305,14 @@ body {
 }
 
 @media (max-width: 768px) {
+    .car-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .car-card.featured {
+        grid-column: span 1;
+    }
+
     .nav-links {
         display: none;
     }

@@ -638,10 +638,6 @@ body {
     background: linear-gradient(135deg, #2a1515 0%, #1a0d0d 100%);
 }
 
-.car-placeholder.rolls {
-    background: linear-gradient(135deg, #1a1a2e 0%, #0d0d1a 100%);
-}
-
 .car-placeholder.porsche {
     background: linear-gradient(135deg, #1a2020 0%, #0d1515 100%);
 }

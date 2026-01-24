@@ -1000,6 +1000,137 @@ body {
     color: var(--text-subtle);
 }
 
+/* Screenshot Testimonials Gallery */
+.screenshot-testimonials {
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.screenshot-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    text-align: center;
+    color: var(--text-white);
+    margin-bottom: 10px;
+}
+
+.screenshot-section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.screenshot-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.screenshot-item {
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+
+.screenshot-item:hover {
+    transform: scale(1.03);
+    border-color: var(--accent-gold);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.screenshot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Social Proof Banner with Twitter */
+.social-proof-banner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(212, 175, 55, 0.05) 100%);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 30px 40px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.twitter-profile {
+    flex-shrink: 0;
+    max-width: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.twitter-profile img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.social-proof-text {
+    flex: 1;
+}
+
+.social-proof-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--text-white);
+    margin-bottom: 10px;
+}
+
+.social-proof-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.small-cta {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+    .screenshot-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .screenshot-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .social-proof-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+        gap: 25px;
+    }
+
+    .twitter-profile {
+        max-width: 100%;
+    }
+
+    .social-proof-text h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .screenshot-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .testimonial-cta {
     text-align: center;
     padding-top: 30px;

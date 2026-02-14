@@ -608,7 +608,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 60%;
+    object-position: center 30%;
     transition: transform 0.5s ease;
 }
 
@@ -1095,6 +1095,105 @@ body {
 .small-cta {
     padding: 12px 25px;
     font-size: 0.9rem;
+}
+
+.social-proof-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* =====================================================
+   MEMBER VIDEO TESTIMONIALS SECTION
+   ===================================================== */
+.member-video-testimonials {
+    padding: var(--section-padding) 0;
+    background: var(--primary-darker);
+}
+
+.member-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.member-video-card {
+    background: var(--gradient-card);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: var(--transition-normal);
+}
+
+.member-video-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--shadow-md);
+}
+
+.member-video-card.featured-member-video {
+    grid-column: span 2;
+}
+
+.member-video-embed {
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+}
+
+.member-video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.member-video-info {
+    padding: 20px 25px;
+}
+
+.member-video-info h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 6px;
+}
+
+.member-video-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.member-video-info .member-result {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 6px 14px;
+    border-radius: 8px;
+    color: var(--success-green);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+    .member-videos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .member-videos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-proof-buttons {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 1024px) {

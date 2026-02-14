@@ -571,8 +571,6 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    position: relative;
-    align-items: start;
 }
 
 .car-card {
@@ -581,8 +579,6 @@ body {
     overflow: hidden;
     border: 1px solid var(--card-border);
     transition: var(--transition-normal);
-    display: flex;
-    flex-direction: column;
 }
 
 .car-card:hover {
@@ -592,7 +588,7 @@ body {
 }
 
 .car-card.featured {
-    grid-column: span 2;
+    /* featured styling */
 }
 
 .car-image {
@@ -1017,9 +1013,8 @@ body {
 }
 
 .screenshot-gallery {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
+    columns: 4;
+    column-gap: 15px;
 }
 
 .screenshot-item {
@@ -1029,6 +1024,8 @@ body {
     border: 1px solid var(--card-border);
     transition: var(--transition-fast);
     cursor: pointer;
+    break-inside: avoid;
+    margin-bottom: 15px;
 }
 
 .screenshot-item:hover {
@@ -1193,14 +1190,14 @@ body {
 
 @media (max-width: 1024px) {
     .screenshot-gallery {
-        grid-template-columns: repeat(3, 1fr);
+        columns: 3;
     }
 }
 
 @media (max-width: 768px) {
     .screenshot-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        columns: 2;
+        column-gap: 10px;
     }
 
     .social-proof-banner {
@@ -1221,7 +1218,7 @@ body {
 
 @media (max-width: 480px) {
     .screenshot-gallery {
-        grid-template-columns: repeat(2, 1fr);
+        columns: 2;
     }
 }
 
@@ -1513,11 +1510,7 @@ body {
     }
 
     .car-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .car-card.featured {
-        grid-column: span 2;
+        columns: 2;
     }
 
     .testimonial-card.featured-testimonial {
@@ -1527,11 +1520,7 @@ body {
 
 @media (max-width: 768px) {
     .car-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .car-card.featured {
-        grid-column: span 1;
+        columns: 1;
     }
 
     .nav-links {

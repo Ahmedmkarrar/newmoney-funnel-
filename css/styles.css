@@ -571,6 +571,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    align-items: start;
 }
 
 .car-card {
@@ -1510,7 +1511,7 @@ body {
     }
 
     .car-gallery {
-        columns: 2;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .testimonial-card.featured-testimonial {
@@ -1520,7 +1521,7 @@ body {
 
 @media (max-width: 768px) {
     .car-gallery {
-        columns: 1;
+        grid-template-columns: 1fr;
     }
 
     .nav-links {

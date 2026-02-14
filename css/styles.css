@@ -571,7 +571,6 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    align-items: start;
 }
 
 .car-card {
@@ -580,7 +579,6 @@ body {
     overflow: hidden;
     border: 1px solid var(--card-border);
     transition: var(--transition-normal);
-    height: fit-content;
 }
 
 .car-card:hover {
@@ -596,11 +594,13 @@ body {
 .car-image {
     position: relative;
     overflow: hidden;
+    aspect-ratio: 3 / 4;
 }
 
 .car-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
     transition: transform 0.5s ease;
 }

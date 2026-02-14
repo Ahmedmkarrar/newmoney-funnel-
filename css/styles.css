@@ -1535,7 +1535,25 @@ body {
 
     .hero-checkmarks {
         flex-direction: column;
-        gap: 15px;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 0 10px;
+    }
+
+    .checkmark-item {
+        align-items: flex-start;
+        text-align: left;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .check-icon {
+        min-width: 22px;
+        min-height: 22px;
+        width: 22px;
+        height: 22px;
+        font-size: 0.7rem;
+        margin-top: 1px;
     }
 
     .timeline::before {

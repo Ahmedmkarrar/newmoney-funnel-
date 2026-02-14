@@ -580,6 +580,7 @@ body {
     overflow: hidden;
     border: 1px solid var(--card-border);
     transition: var(--transition-normal);
+    height: fit-content;
 }
 
 .car-card:hover {
